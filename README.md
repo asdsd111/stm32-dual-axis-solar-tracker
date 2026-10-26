@@ -14,19 +14,6 @@ Firmware reconstruction of a dual-axis solar tracker built around the STM32F103C
 - LED and buzzer over-temperature alarm
 - Modular STM32Cube HAL firmware suitable for PlatformIO
 
-## System overview
-
-```mermaid
-flowchart LR
-    LDR[Four LDR sensors] --> ADC[ADC acquisition]
-    ADC --> CTRL[Tracking controller]
-    BTN[Five buttons] --> CTRL
-    CTRL --> PWM[TIM1 PWM]
-    PWM --> SERVO[Two SG90 servos]
-    TEMP[DS18B20] --> APP[Application]
-    APP --> OLED[SSD1306 OLED]
-    APP --> ALARM[LED and buzzer]
-```
 
 ## Repository structure
 
