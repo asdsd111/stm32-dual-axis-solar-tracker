@@ -103,11 +103,3 @@ All hardware-dependent settings are kept in `include/app_config.h`.
 - `TEMPERATURE_ALARM_C`: over-temperature alarm threshold.
 
 If either axis moves away from the light, swap the corresponding LDR inputs, reverse the servo linkage, or invert the direction in `tracker.c`.
-
-## Reconstruction scope
-
-The thesis appendix contained only the application-level main program. The control behaviour, three-sample ADC averaging, automatic/manual modes, light-difference threshold and original 1750-1950 microsecond servo limits were retained. Peripheral drivers, pin corrections, button debounce, CRC validation and non-blocking temperature acquisition were reconstructed to produce a complete modular firmware example. See `docs/reconstruction_notes.md` for details.
-
-## Current verification status
-
-The source has been reviewed for module consistency and STM32 HAL API usage. Hardware verification is still required because the original document did not provide complete schematics, driver source files or an exact wiring table for every peripheral.
